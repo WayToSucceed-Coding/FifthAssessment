@@ -2,10 +2,11 @@
     "moduleName": "Module 4",
     "topics": [
         {
-            "name": "Introduction to Data Science",
-            "description": "Covers Python concepts related to data science including what pandas is, creating DataFrames from dictionaries, loading CSV files, and using basic exploratory functions like head(), tail(), info(), describe(), value_counts(), and sort_values().",
+            "name": "Data Science",
+            "totalQuestions": 20,
             "mcqs": [
                 {
+                    "topic": "Introduction to Data Science",
                     "question": "Which Python library is used for data analysis and manipulation using DataFrames?",
                     "options": [
                         "numpy",
@@ -14,147 +15,22 @@
                         "seaborn"
                     ],
                     "answer": 1,
-                    "explanation": "pandas is a powerful Python library designed for data analysis and manipulation. It provides the DataFrame structure."
+                    "explanation": "pandas is designed for data analysis and manipulation. It provides the DataFrame structure used throughout data science workflows."
                 },
                 {
-                    "question": "Which function is used to create a DataFrame from a dictionary?",
+                    "topic": "Introduction to Data Science",
+                    "question": "What does the describe() method provide about a DataFrame?",
                     "options": [
-                        "pd.read_csv()",
-                        "pd.Series()",
-                        "pd.DataFrame()",
-                        "pd.create()"
-                    ],
-                    "answer": 2,
-                    "explanation": "pd.DataFrame(dictionary) converts a dictionary into a DataFrame where keys become column names and values become column data."
-                },
-                {
-                    "question": "What does NaN stand for in a pandas DataFrame?",
-                    "options": [
-                        "Not a Name",
-                        "New and Null",
-                        "Not a Number",
-                        "None and Numeric"
-                    ],
-                    "answer": 2,
-                    "explanation": "NaN stands for 'Not a Number' and is used in pandas to represent missing or empty values in a dataset."
-                },
-                {
-                    "question": "Which function is used to read a CSV file into a DataFrame?",
-                    "options": [
-                        "pd.open_csv()",
-                        "pd.load_csv()",
-                        "pd.import_csv()",
-                        "pd.read_csv()"
-                    ],
-                    "answer": 3,
-                    "explanation": "pd.read_csv(filepath) reads a CSV file and converts it into a DataFrame."
-                },
-                {
-                    "question": "What does the head() method return by default if no argument is passed?",
-                    "options": [
-                        "The last 5 rows",
-                        "The first 5 rows",
-                        "All rows",
-                        "The first row only"
-                    ],
-                    "answer": 1,
-                    "explanation": "head() returns the first 5 rows of a DataFrame by default when no argument is provided."
-                },
-                {
-                    "question": "Which method is used to view the last few rows of a DataFrame?",
-                    "options": [
-                        "head()",
-                        "end()",
-                        "tail()",
-                        "bottom()"
-                    ],
-                    "answer": 2,
-                    "explanation": "tail() returns the last rows of a DataFrame. By default it shows the last 5 rows."
-                },
-                {
-                    "question": "What information does the info() method provide about a DataFrame?",
-                    "options": [
-                        "Statistical summary of numeric columns",
-                        "Number of rows, columns, data types, and non-null counts",
                         "The first 5 rows of data",
-                        "Only the column names"
+                        "A statistical summary including mean, std, min, and max for numeric columns",
+                        "Column names and data types only",
+                        "The number of missing values per column"
                     ],
                     "answer": 1,
-                    "explanation": "info() provides a summary including row count, column names, data types (dtype), and the number of non-null values in each column."
+                    "explanation": "describe() generates a statistical summary of numeric columns including count, mean, standard deviation, min, max, and quartile values."
                 },
                 {
-                    "question": "Which method counts how many times each unique value appears in a column?",
-                    "options": [
-                        "count()",
-                        "unique()",
-                        "frequency()",
-                        "value_counts()"
-                    ],
-                    "answer": 3,
-                    "explanation": "value_counts() counts the frequency of each unique value in a column and returns them in descending order."
-                },
-                {
-                    "question": "What does sort_values('column', ascending=False) do?",
-                    "options": [
-                        "Sorts the column from smallest to largest",
-                        "Removes duplicate values in the column",
-                        "Sorts the entire DataFrame by that column from largest to smallest",
-                        "Filters rows where the column value is False"
-                    ],
-                    "answer": 2,
-                    "explanation": "sort_values() sorts the entire DataFrame by the specified column. ascending=False sorts from largest to smallest (descending order)."
-                },
-                {
-                    "question": "Which syntax is used to select a single column from a DataFrame?",
-                    "options": [
-                        "df[['column_name']]",
-                        "df.get('column_name')",
-                        "df['column_name']",
-                        "df.column_name()"
-                    ],
-                    "answer": 2,
-                    "explanation": "df['column_name'] with single brackets selects a single column and returns it as a pandas Series."
-                }
-            ]
-        },
-        {
-            "name": "Filtering and Analyzing Data with Pandas",
-            "description": "Covers selecting rows and columns using loc, filtering data with comparison operators, combining conditions using AND (&) and OR (|) logic, and adding calculated columns to DataFrames.",
-            "mcqs": [
-                {
-                    "question": "Which pandas method is used to select rows and columns by their labels?",
-                    "options": [
-                        "iloc",
-                        "loc",
-                        "select()",
-                        "filter()"
-                    ],
-                    "answer": 1,
-                    "explanation": "loc lets us select rows and columns using their labels (names or index numbers)."
-                },
-                {
-                    "question": "When using loc with a range like df.loc[0:2], which rows are included?",
-                    "options": [
-                        "Only rows 0 and 1",
-                        "Only row 2",
-                        "Rows 0, 1, and 2",
-                        "Rows 1 and 2 only"
-                    ],
-                    "answer": 2,
-                    "explanation": "With loc, when you use 0:2 it includes both endpoints, so you get rows 0, 1, and 2."
-                },
-                {
-                    "question": "What does the condition df['math_score'] > 85 return?",
-                    "options": [
-                        "All students with math scores greater than 85",
-                        "A list of True/False values for each row",
-                        "The highest math score",
-                        "The average of all math scores"
-                    ],
-                    "answer": 1,
-                    "explanation": "df['math_score'] > 85 creates a Series of True/False values — True for rows where the condition is met, False otherwise."
-                },
-                {
+                    "topic": "Filtering and Analyzing Data with Pandas",
                     "question": "Which symbol combines two filter conditions with AND logic in pandas?",
                     "options": [
                         "|",
@@ -166,40 +42,20 @@
                     "explanation": "& is used to combine two filter conditions with AND logic. Both conditions must be True for a row to be included."
                 },
                 {
-                    "question": "Which symbol combines two filter conditions with OR logic in pandas?",
+                    "topic": "Filtering and Analyzing Data with Pandas",
+                    "question": "When using df.loc[0:2], which rows are included?",
                     "options": [
-                        "&",
-                        "||",
-                        "|",
-                        "or"
+                        "Only rows 0 and 1",
+                        "Only row 2",
+                        "Rows 0, 1, and 2",
+                        "Rows 1 and 2 only"
                     ],
                     "answer": 2,
-                    "explanation": "| is used to combine two filter conditions with OR logic. At least one condition must be True for a row to be included."
+                    "explanation": "With loc, the range 0:2 is inclusive of both endpoints, so rows 0, 1, and 2 are all returned."
                 },
                 {
-                    "question": "When combining two conditions in a pandas filter, why must each condition be inside parentheses?",
-                    "options": [
-                        "To make the code look cleaner",
-                        "Because Python requires parentheses around all conditions",
-                        "To ensure correct operator precedence when using & or |",
-                        "Parentheses are optional when filtering"
-                    ],
-                    "answer": 2,
-                    "explanation": "Each condition must be in parentheses when combining with & or | to ensure correct operator precedence and avoid errors."
-                },
-                {
-                    "question": "What does this code do? df[df['grade'] != '8th']",
-                    "options": [
-                        "Shows only students in 8th grade",
-                        "Shows students who are NOT in 8th grade",
-                        "Removes the grade column",
-                        "Counts how many students are in 8th grade"
-                    ],
-                    "answer": 1,
-                    "explanation": "!= means 'not equal to', so this filter returns all rows where the grade column is NOT '8th'."
-                },
-                {
-                    "question": "Which code correctly adds a calculated column for average score?",
+                    "topic": "Filtering and Analyzing Data with Pandas",
+                    "question": "Which code correctly adds a calculated average score column to a DataFrame?",
                     "options": [
                         "df.add_column('avg') = df['math'] + df['science']",
                         "df['average'] = (df['math'] + df['science'] + df['english']) / 3",
@@ -207,48 +63,10 @@
                         "df.average = df['math'].mean()"
                     ],
                     "answer": 1,
-                    "explanation": "df['new_column'] = calculation is the correct syntax to add a calculated column. The calculation uses existing columns."
+                    "explanation": "df['new_column'] = calculation is the correct syntax. The calculation uses existing column values row by row."
                 },
                 {
-                    "question": "What does df.loc[:, 'name'] mean?",
-                    "options": [
-                        "Select the 'name' column for the first row only",
-                        "Select all rows but only the 'name' column",
-                        "Select the column named ':'",
-                        "Select all columns for the row labelled 'name'"
-                    ],
-                    "answer": 1,
-                    "explanation": "The colon : by itself means 'all rows', so df.loc[:, 'name'] selects all rows but only the 'name' column."
-                },
-                {
-                    "question": "After adding a new calculated column to a DataFrame, how can you use it for filtering?",
-                    "options": [
-                        "You must recalculate it each time",
-                        "You can filter it just like any other existing column",
-                        "Calculated columns cannot be used in filters",
-                        "You must save and reload the DataFrame first"
-                    ],
-                    "answer": 1,
-                    "explanation": "Once added to the DataFrame, a calculated column can be used in filters exactly the same way as any original column."
-                }
-            ]
-        },
-        {
-            "name": "Data Cleaning",
-            "description": "Covers identifying and handling missing values using isnull() and fillna(), fixing inconsistent text with str.lower() and str.strip(), removing duplicate rows using duplicated() and drop_duplicates(), renaming columns with rename(), and saving clean data using to_csv().",
-            "mcqs": [
-                {
-                    "question": "Which method renames columns in a pandas DataFrame?",
-                    "options": [
-                        "change_columns()",
-                        "update_columns()",
-                        "rename()",
-                        "modify()"
-                    ],
-                    "answer": 2,
-                    "explanation": "rename() is used to change column names. It accepts a dictionary mapping old names to new names."
-                },
-                {
+                    "topic": "Data Cleaning",
                     "question": "What does isnull().sum() tell us about a DataFrame?",
                     "options": [
                         "The total number of rows",
@@ -257,20 +75,10 @@
                         "Whether any column names are null"
                     ],
                     "answer": 1,
-                    "explanation": "isnull() marks missing values as True, and sum() counts the True values per column, giving the number of missing values in each column."
+                    "explanation": "isnull() marks missing values as True, and sum() counts those True values per column, giving the number of missing entries in each."
                 },
                 {
-                    "question": "What does the fillna() method do?",
-                    "options": [
-                        "Removes all missing values from the DataFrame",
-                        "Finds missing values and highlights them",
-                        "Replaces all missing values (NaN) with a specified value",
-                        "Creates new missing values for testing"
-                    ],
-                    "answer": 2,
-                    "explanation": "fillna() replaces all NaN (missing) values with a value you specify, such as 'Unknown' or 0."
-                },
-                {
+                    "topic": "Data Cleaning",
                     "question": "Why do we convert text to lowercase before analyzing it?",
                     "options": [
                         "It makes the text look better on screen",
@@ -279,42 +87,10 @@
                         "It makes the code run faster"
                     ],
                     "answer": 1,
-                    "explanation": "Computers are case-sensitive, so 'MATH', 'Math', and 'math' are treated as three different values. Converting to lowercase makes them all the same."
+                    "explanation": "Computers are case-sensitive, so 'MATH', 'Math', and 'math' are treated as three different values. Lowercasing ensures consistency."
                 },
                 {
-                    "question": "Which method removes extra spaces from the beginning and end of text in a pandas column?",
-                    "options": [
-                        "str.remove()",
-                        "str.clean()",
-                        "str.strip()",
-                        "str.delete()"
-                    ],
-                    "answer": 2,
-                    "explanation": "str.strip() removes leading (beginning) and trailing (end) whitespace from each value in a text column."
-                },
-                {
-                    "question": "What does the duplicated() method return?",
-                    "options": [
-                        "A new DataFrame with duplicates removed",
-                        "True for rows that are duplicates of earlier rows, False for unique rows",
-                        "The count of duplicate rows",
-                        "The column names that have duplicates"
-                    ],
-                    "answer": 1,
-                    "explanation": "duplicated() identifies duplicate rows and returns True for rows that are duplicates of earlier rows and False for unique rows."
-                },
-                {
-                    "question": "Which method removes duplicate rows and keeps only the first occurrence?",
-                    "options": [
-                        "remove_duplicates()",
-                        "drop_duplicates()",
-                        "delete_duplicates()",
-                        "clean_duplicates()"
-                    ],
-                    "answer": 1,
-                    "explanation": "drop_duplicates() removes all duplicate rows from the DataFrame, keeping only the first occurrence of each unique row."
-                },
-                {
+                    "topic": "Data Cleaning",
                     "question": "What does setting inplace=True do in methods like rename() or fillna()?",
                     "options": [
                         "Creates a copy of the DataFrame",
@@ -323,48 +99,10 @@
                         "Reverts all changes"
                     ],
                     "answer": 1,
-                    "explanation": "inplace=True modifies the original DataFrame directly. Without it (default False), a new DataFrame is returned and the original stays unchanged."
+                    "explanation": "inplace=True modifies the original DataFrame directly. Without it, a new DataFrame is returned and the original stays unchanged."
                 },
                 {
-                    "question": "Which method saves a DataFrame to a CSV file?",
-                    "options": [
-                        "df.save_csv()",
-                        "df.export()",
-                        "df.to_csv()",
-                        "df.write_csv()"
-                    ],
-                    "answer": 2,
-                    "explanation": "to_csv() saves a DataFrame to a CSV file. Setting index=False prevents row numbers from being saved into the file."
-                },
-                {
-                    "question": "What is meant by the saying 'Garbage in, garbage out' in data cleaning?",
-                    "options": [
-                        "You should delete all old datasets",
-                        "If the data going into your analysis is messy, the results will also be wrong",
-                        "Cleaning data creates garbage files that need to be deleted",
-                        "Only garbage data needs to be cleaned"
-                    ],
-                    "answer": 1,
-                    "explanation": "'Garbage in, garbage out' means that if your data is messy or incorrect, your analysis results will also be inaccurate or misleading."
-                }
-            ]
-        },
-        {
-            "name": "Data Visualization with Matplotlib",
-            "description": "Covers creating bar charts, line graphs, pie charts, and scatter plots using the matplotlib.pyplot library, along with adding labels, titles, colors, legends, and visual styling.",
-            "mcqs": [
-                {
-                    "question": "Which Python library is most commonly used for creating basic data visualizations like bar charts and line graphs?",
-                    "options": [
-                        "pandas",
-                        "numpy",
-                        "matplotlib",
-                        "seaborn"
-                    ],
-                    "answer": 2,
-                    "explanation": "matplotlib is Python's most popular library for creating visualizations. We use its pyplot module, imported as plt."
-                },
-                {
+                    "topic": "Data Visualization with Matplotlib",
                     "question": "Which function creates a bar chart in matplotlib?",
                     "options": [
                         "plt.plot()",
@@ -376,39 +114,7 @@
                     "explanation": "plt.bar(x_values, height_values) draws rectangular bars to represent categories and their values."
                 },
                 {
-                    "question": "Which function creates a line graph in matplotlib?",
-                    "options": [
-                        "plt.line()",
-                        "plt.graph()",
-                        "plt.plot()",
-                        "plt.draw()"
-                    ],
-                    "answer": 2,
-                    "explanation": "plt.plot(x_values, y_values) draws lines connecting data points, ideal for showing trends over time."
-                },
-                {
-                    "question": "What does the autopct='%1.1f%%' parameter do in a pie chart?",
-                    "options": [
-                        "Changes the size of the pie chart",
-                        "Displays the percentage each slice represents",
-                        "Changes the color of the slices",
-                        "Adds a shadow effect"
-                    ],
-                    "answer": 1,
-                    "explanation": "autopct='%1.1f%%' automatically calculates and displays the percentage each slice represents on the pie chart."
-                },
-                {
-                    "question": "Which function creates a scatter plot in matplotlib?",
-                    "options": [
-                        "plt.plot()",
-                        "plt.dots()",
-                        "plt.scatter()",
-                        "plt.points()"
-                    ],
-                    "answer": 2,
-                    "explanation": "plt.scatter(x_values, y_values) plots individual data points as dots, showing the relationship between two variables."
-                },
-                {
+                    "topic": "Data Visualization with Matplotlib",
                     "question": "What does the alpha parameter control in matplotlib plots?",
                     "options": [
                         "The size of the data points",
@@ -417,20 +123,10 @@
                         "The label of the data points"
                     ],
                     "answer": 2,
-                    "explanation": "alpha controls transparency of plotted elements — 0 is fully transparent (invisible), 1 is fully opaque (solid)."
+                    "explanation": "alpha controls transparency — 0 is fully transparent (invisible), 1 is fully opaque (solid)."
                 },
                 {
-                    "question": "Which function adds a title to a matplotlib chart?",
-                    "options": [
-                        "plt.header()",
-                        "plt.name()",
-                        "plt.heading()",
-                        "plt.title()"
-                    ],
-                    "answer": 3,
-                    "explanation": "plt.title('text') adds a descriptive title at the top of the chart."
-                },
-                {
+                    "topic": "Data Visualization with Matplotlib",
                     "question": "In a pie chart, what does the explode parameter do?",
                     "options": [
                         "Deletes a slice from the chart",
@@ -439,48 +135,10 @@
                         "Changes the color of a specific slice"
                     ],
                     "answer": 1,
-                    "explanation": "explode pulls specific slices outward from the center. For example, (0.1, 0, 0) pulls the first slice out by 0.1 units."
+                    "explanation": "explode pulls specific slices outward from the center of the pie to draw attention to them."
                 },
                 {
-                    "question": "What is the purpose of plt.legend() in a matplotlib chart?",
-                    "options": [
-                        "Adds a title to the chart",
-                        "Adds labels to the axes",
-                        "Displays a box explaining what each color or shape represents",
-                        "Saves the chart as an image"
-                    ],
-                    "answer": 2,
-                    "explanation": "plt.legend() displays a legend box that explains what each line, bar, or color in the chart represents using the label parameters."
-                },
-                {
-                    "question": "How can you color scatter plot points differently based on a category (like grade level)?",
-                    "options": [
-                        "Use the color parameter with a single color value",
-                        "Create a dictionary mapping categories to colors and use the c parameter with the mapped values",
-                        "It is not possible to color points by category",
-                        "Use the hue parameter in matplotlib"
-                    ],
-                    "answer": 1,
-                    "explanation": "Create a dictionary mapping each category to a color, map it using df['column'].map(color_dict), then pass the result to the c parameter in plt.scatter()."
-                }
-            ]
-        },
-        {
-            "name": "Data Visualization with Seaborn",
-            "description": "Covers using the Seaborn library for statistical visualizations including countplot, regplot, barplot, boxplot, histplot with KDE, correlation heatmap, and creating subplots for multi-panel views.",
-            "mcqs": [
-                {
-                    "question": "Which Seaborn function creates a bar chart showing the frequency (count) of each category automatically?",
-                    "options": [
-                        "sns.barplot()",
-                        "sns.histogram()",
-                        "sns.countplot()",
-                        "sns.freqplot()"
-                    ],
-                    "answer": 2,
-                    "explanation": "sns.countplot() creates a bar chart that automatically counts and displays the number of occurrences of each category."
-                },
-                {
+                    "topic": "Data Visualization with Seaborn",
                     "question": "What does the hue parameter do in Seaborn plots?",
                     "options": [
                         "Changes the background color of the chart",
@@ -489,103 +147,22 @@
                         "Controls the transparency of the plot"
                     ],
                     "answer": 1,
-                    "explanation": "hue adds another categorical variable to a plot by coloring data points or bars differently for each category value."
+                    "explanation": "hue adds another categorical variable by coloring data points or bars differently for each category value."
                 },
                 {
-                    "question": "Which Seaborn function creates a scatter plot with an automatic regression (trend) line?",
-                    "options": [
-                        "sns.scatterplot()",
-                        "sns.lineplot()",
-                        "sns.regplot()",
-                        "sns.trendplot()"
-                    ],
-                    "answer": 2,
-                    "explanation": "sns.regplot() creates a scatter plot and automatically adds a regression (trend) line with a confidence interval."
-                },
-                {
-                    "question": "What does a box plot show?",
-                    "options": [
-                        "Only the average value for each category",
-                        "The full distribution including median, quartiles, range, and outliers",
-                        "The frequency of each unique value",
-                        "The correlation between two variables"
-                    ],
-                    "answer": 1,
-                    "explanation": "A box plot shows the complete distribution: the median (center line), Q1 and Q3 (box), whiskers (range), and outliers (dots beyond whiskers)."
-                },
-                {
-                    "question": "What does kde=True do in sns.histplot()?",
-                    "options": [
-                        "Creates a bar chart instead of a histogram",
-                        "Adds a smooth density curve over the histogram bars",
-                        "Removes the histogram bars",
-                        "Colors the histogram by category"
-                    ],
-                    "answer": 1,
-                    "explanation": "kde=True adds a smooth Kernel Density Estimate curve over the histogram bars, making the distribution pattern easier to see."
-                },
-                {
-                    "question": "Which function applies a predefined style to all future Seaborn visualizations?",
-                    "options": [
-                        "sns.apply_theme()",
-                        "sns.set_style()",
-                        "sns.set_theme()",
-                        "sns.configure()"
-                    ],
-                    "answer": 2,
-                    "explanation": "sns.set_theme(style='whitegrid') applies a predefined visual style to all subsequent Seaborn plots."
-                },
-                {
+                    "topic": "Data Visualization with Seaborn",
                     "question": "What does a correlation value of -0.85 in a heatmap indicate?",
                     "options": [
-                        "A strong positive relationship between two variables",
-                        "No relationship between two variables",
-                        "A strong negative relationship between two variables",
+                        "A strong positive relationship",
+                        "No relationship between the variables",
+                        "A strong negative relationship",
                         "A moderate positive relationship"
                     ],
                     "answer": 2,
-                    "explanation": "Correlation values close to -1 indicate a strong negative relationship — when one variable increases, the other strongly decreases."
+                    "explanation": "Correlation close to -1 indicates a strong negative relationship — when one variable increases, the other strongly decreases."
                 },
                 {
-                    "question": "Why does the diagonal of a correlation heatmap always show 1.00?",
-                    "options": [
-                        "It is a bug in the calculation",
-                        "Because each variable is perfectly correlated with itself",
-                        "Because 1.00 is the maximum possible value",
-                        "Because diagonal cells are not calculated"
-                    ],
-                    "answer": 1,
-                    "explanation": "Each cell on the diagonal compares a variable with itself, which always results in a perfect correlation of 1.00."
-                },
-                {
-                    "question": "Which Seaborn function creates a bar chart that shows the average value for each category with confidence intervals?",
-                    "options": [
-                        "sns.countplot()",
-                        "sns.barplot()",
-                        "sns.avgplot()",
-                        "sns.meanplot()"
-                    ],
-                    "answer": 1,
-                    "explanation": "sns.barplot() creates bars showing the average (mean) value for each category and displays confidence intervals as error bars."
-                },
-                {
-                    "question": "What does plt.subplot(2, 2, 3) specify?",
-                    "options": [
-                        "Create 3 rows and 2 columns and activate the second subplot",
-                        "Create a 2x2 grid and activate the third subplot (bottom-left)",
-                        "Create 2 rows and 3 columns and activate the second subplot",
-                        "Create a single plot with 3 elements"
-                    ],
-                    "answer": 1,
-                    "explanation": "plt.subplot(rows, cols, position) — here 2 rows, 2 columns, position 3 which is the bottom-left in the 2x2 grid."
-                }
-            ]
-        },
-        {
-            "name": "Interactive Data Visualization with Plotly",
-            "description": "Covers using Plotly Express to create interactive charts including histograms, distribution curves, box plots, scatter plots, and correlation heatmaps, plus understanding normal distribution and the Bell Curve.",
-            "mcqs": [
-                {
+                    "topic": "Interactive Data Visualization with Plotly",
                     "question": "What is the main advantage of Plotly over Matplotlib and Seaborn?",
                     "options": [
                         "It requires less code to import",
@@ -594,31 +171,10 @@
                         "It only works in Jupyter Notebooks"
                     ],
                     "answer": 1,
-                    "explanation": "Plotly creates interactive visualizations where users can hover over data points, zoom in, click to filter categories, and download charts."
+                    "explanation": "Plotly creates interactive charts where users can hover, zoom, click to filter, and download — unlike the static outputs of Matplotlib and Seaborn."
                 },
                 {
-                    "question": "Which Plotly Express function is used to create an interactive box plot?",
-                    "options": [
-                        "px.scatter()",
-                        "px.histogram()",
-                        "px.box()",
-                        "px.boxplot()"
-                    ],
-                    "answer": 2,
-                    "explanation": "px.box() creates an interactive box-and-whisker plot showing the full distribution of data across categories."
-                },
-                {
-                    "question": "What does the points='all' parameter do in px.box()?",
-                    "options": [
-                        "Shows only outlier points",
-                        "Hides all individual data points",
-                        "Displays every individual data point on top of the box plot",
-                        "Connects all points with a line"
-                    ],
-                    "answer": 2,
-                    "explanation": "points='all' makes every individual data point visible as a dot on top of the box plot, allowing detailed exploration."
-                },
-                {
+                    "topic": "Interactive Data Visualization with Plotly",
                     "question": "What does a normal distribution (Bell Curve) look like?",
                     "options": [
                         "A straight line from left to right",
@@ -630,100 +186,7 @@
                     "explanation": "A normal distribution forms a symmetric bell shape — most values cluster around the average in the middle, with fewer values in the tails."
                 },
                 {
-                    "question": "Which module from Plotly is used to create distribution curves?",
-                    "options": [
-                        "plotly.express",
-                        "plotly.graph_objects",
-                        "plotly.figure_factory",
-                        "plotly.distribution"
-                    ],
-                    "answer": 2,
-                    "explanation": "plotly.figure_factory (imported as ff) provides the create_distplot() function for creating smooth distribution curves."
-                },
-                {
-                    "question": "Which function is used to customize a Plotly chart's title and axis labels after creation?",
-                    "options": [
-                        "fig.add_title()",
-                        "fig.update_layout()",
-                        "fig.set_labels()",
-                        "fig.configure()"
-                    ],
-                    "answer": 1,
-                    "explanation": "fig.update_layout() allows you to customize elements like title, xaxis_title, and yaxis_title after the chart is initially created."
-                },
-                {
-                    "question": "What does a correlation value close to +1.0 indicate in a heatmap?",
-                    "options": [
-                        "A strong negative relationship",
-                        "No relationship between the variables",
-                        "A strong positive relationship",
-                        "The variables are identical"
-                    ],
-                    "answer": 2,
-                    "explanation": "A correlation close to +1.0 indicates a strong positive relationship — when one variable increases, the other strongly increases too."
-                },
-                {
-                    "question": "Which px.scatter() parameter makes bubble size represent a third variable?",
-                    "options": [
-                        "color",
-                        "alpha",
-                        "size",
-                        "marker"
-                    ],
-                    "answer": 2,
-                    "explanation": "The size parameter in px.scatter() maps a numeric column to the size of each bubble, adding a third visual dimension to the chart."
-                },
-                {
-                    "question": "What does trendline='ols' add to a Plotly scatter plot?",
-                    "options": [
-                        "Removes all data points",
-                        "Adds a linear regression best-fit line",
-                        "Highlights outlier points",
-                        "Colors points by category"
-                    ],
-                    "answer": 1,
-                    "explanation": "trendline='ols' adds an Ordinary Least Squares linear regression line to the scatter plot, showing the overall trend."
-                },
-                {
-                    "question": "Why is subscriber count NOT normally distributed on YouTube?",
-                    "options": [
-                        "Because subscriber counts are always rounded to the nearest thousand",
-                        "Because a few creators have millions of subscribers while most have modest counts — a power law distribution",
-                        "Because subscriber counts cannot be measured statistically",
-                        "Because YouTube limits subscriptions to prevent normal distribution"
-                    ],
-                    "answer": 1,
-                    "explanation": "Subscriber counts follow a power law — a very small number of creators have enormous subscriber counts while the vast majority have much smaller numbers, creating a heavily skewed distribution."
-                }
-            ]
-        },
-        {
-            "name": "Data Story",
-            "description": "Covers combining data analysis and visualization to build a narrative, using apply() to create new columns, groupby() to compare categories, and summary statistics methods mean(), sum(), and count().",
-            "mcqs": [
-                {
-                    "question": "What is a data story?",
-                    "options": [
-                        "A fictional story written using data as inspiration",
-                        "Transforming data into a narrative that explains what is happening and why it matters",
-                        "A report that only shows numbers and charts",
-                        "A dataset stored as a text file"
-                    ],
-                    "answer": 1,
-                    "explanation": "A data story combines analysis with narrative — using data to answer questions, present evidence, and communicate insights in a way anyone can understand."
-                },
-                {
-                    "question": "What is the purpose of the apply() method in pandas?",
-                    "options": [
-                        "To sort data in a DataFrame",
-                        "To apply a custom function to every element in a column or row",
-                        "To create a new empty DataFrame",
-                        "To delete rows from a DataFrame"
-                    ],
-                    "answer": 1,
-                    "explanation": "apply() runs a specified function on every element in a column (or every row) of a DataFrame, making it useful for creating calculated columns."
-                },
-                {
+                    "topic": "Data Story",
                     "question": "Which method groups data by categories so you can perform calculations on each group separately?",
                     "options": [
                         "group()",
@@ -732,53 +195,10 @@
                         "split()"
                     ],
                     "answer": 2,
-                    "explanation": "groupby() splits data into groups based on a column's values, then allows you to apply aggregate functions like mean() or sum() to each group."
+                    "explanation": "groupby() splits data into groups based on a column's values, then lets you apply aggregate functions like mean() or sum() to each group."
                 },
                 {
-                    "question": "What does the mean() method calculate?",
-                    "options": [
-                        "The middle value when sorted",
-                        "The most frequently occurring value",
-                        "The sum of all values",
-                        "The average value"
-                    ],
-                    "answer": 3,
-                    "explanation": "mean() calculates the arithmetic average — the sum of all values divided by the number of values."
-                },
-                {
-                    "question": "What does the sum() method do when applied to a DataFrame column?",
-                    "options": [
-                        "Counts the number of values",
-                        "Adds up all the values in that column",
-                        "Finds the maximum value",
-                        "Calculates the average"
-                    ],
-                    "answer": 1,
-                    "explanation": "sum() adds up all the values in a column or within each group when used after groupby()."
-                },
-                {
-                    "question": "What does axis=1 mean when using apply() on a DataFrame?",
-                    "options": [
-                        "The function is applied to each column",
-                        "The function is applied to each row",
-                        "The function is applied only to numeric columns",
-                        "The function runs only once on the entire DataFrame"
-                    ],
-                    "answer": 1,
-                    "explanation": "axis=1 tells apply() to run the function on each row (passing the entire row as input). axis=0 (default) applies to each column."
-                },
-                {
-                    "question": "Why do we use reindex() after groupby() when ordering days of the week?",
-                    "options": [
-                        "To remove duplicate days",
-                        "Because groupby() sorts days alphabetically, reindex() puts them in correct Monday-Sunday order",
-                        "To convert day names to numbers",
-                        "To add missing days to the result"
-                    ],
-                    "answer": 1,
-                    "explanation": "groupby() sorts alphabetically by default (Friday before Monday), so reindex() with a custom day order ensures the correct Monday-to-Sunday sequence."
-                },
-                {
+                    "topic": "Data Story",
                     "question": "What does a lambda function like lambda x: 'Weekend' if x in weekends else 'Weekday' do in apply()?",
                     "options": [
                         "Creates a new DataFrame",
@@ -787,48 +207,10 @@
                         "Counts how many weekends are in the data"
                     ],
                     "answer": 1,
-                    "explanation": "A lambda function defines a short, inline function. When used with apply(), it runs on every value in the column and returns the appropriate label."
+                    "explanation": "A lambda function defines a short inline function. With apply(), it runs on every value in the column and returns the appropriate label."
                 },
                 {
-                    "question": "In a data story about fitness, what insight can groupby('Day_Type').mean() reveal?",
-                    "options": [
-                        "The total number of days in the dataset",
-                        "The average steps, sleep, and mood for weekdays vs weekends separately",
-                        "Which individual day had the most steps",
-                        "The correlation between sleep and mood"
-                    ],
-                    "answer": 1,
-                    "explanation": "groupby('Day_Type').mean() calculates the average of each numeric column for 'Weekday' and 'Weekend' groups separately, enabling direct comparison."
-                },
-                {
-                    "question": "What comes first in a well-structured data story?",
-                    "options": [
-                        "The conclusion",
-                        "The visualization",
-                        "A clear question or problem",
-                        "The statistical summary"
-                    ],
-                    "answer": 2,
-                    "explanation": "A data story begins with a clear question or problem that defines what you want to find out, followed by analysis, visualization, and insights."
-                }
-            ]
-        },
-        {
-            "name": "Building a Data-Driven Student Insights Dashboard",
-            "description": "Covers building interactive Streamlit web apps with file upload using st.file_uploader(), displaying DataFrames, sidebar controls, dropdown filters with st.sidebar.selectbox(), student search using str.contains(), bar charts, and filtering data dynamically.",
-            "mcqs": [
-                {
-                    "question": "What is the main advantage of using st.file_uploader() instead of hardcoding a filename in the code?",
-                    "options": [
-                        "It makes the code shorter",
-                        "It allows users to upload their own data without changing any code",
-                        "It runs faster than reading from a file path",
-                        "It automatically cleans the uploaded data"
-                    ],
-                    "answer": 1,
-                    "explanation": "st.file_uploader() makes apps reusable — any user can upload their own CSV file without needing to modify the source code."
-                },
-                {
+                    "topic": "Building a Data-Driven Student Insights Dashboard",
                     "question": "What does st.file_uploader() return if no file has been uploaded yet?",
                     "options": [
                         "An empty DataFrame",
@@ -837,42 +219,10 @@
                         "Zero"
                     ],
                     "answer": 2,
-                    "explanation": "st.file_uploader() returns None when no file has been uploaded. This is why we check 'if uploaded_file is not None' before processing."
+                    "explanation": "st.file_uploader() returns None when no file has been uploaded, which is why we check 'if uploaded_file is not None' before processing."
                 },
                 {
-                    "question": "Which Streamlit function displays a pandas DataFrame as an interactive, scrollable table?",
-                    "options": [
-                        "st.table()",
-                        "st.show()",
-                        "st.display()",
-                        "st.dataframe()"
-                    ],
-                    "answer": 3,
-                    "explanation": "st.dataframe() displays a pandas DataFrame as an interactive table that users can scroll through and sort."
-                },
-                {
-                    "question": "What is the purpose of st.sidebar in a Streamlit app?",
-                    "options": [
-                        "To create a new page in the app",
-                        "To place controls like dropdowns and filters in a separate left panel",
-                        "To hide content from users",
-                        "To save the app's data"
-                    ],
-                    "answer": 1,
-                    "explanation": "st.sidebar creates a separate panel on the left side of the app where controls like selectbox, text_input, and sliders can be placed."
-                },
-                {
-                    "question": "Which Streamlit widget creates a dropdown menu where users can select one option?",
-                    "options": [
-                        "st.dropdown()",
-                        "st.select()",
-                        "st.selectbox()",
-                        "st.choose()"
-                    ],
-                    "answer": 2,
-                    "explanation": "st.selectbox() or st.sidebar.selectbox() creates a dropdown menu where users can select one option from a list."
-                },
-                {
+                    "topic": "Building a Data-Driven Student Insights Dashboard",
                     "question": "What does str.contains(search_name, case=False, na=False) do in pandas?",
                     "options": [
                         "Checks if the entire column equals the search name",
@@ -881,114 +231,40 @@
                         "Counts how many times the name appears"
                     ],
                     "answer": 2,
-                    "explanation": "str.contains() checks whether each cell contains the given text. case=False makes it case-insensitive and na=False handles missing values without errors."
+                    "explanation": "str.contains() checks whether each cell contains the given text. case=False makes it case-insensitive and na=False handles missing values safely."
                 },
                 {
-                    "question": "Which Streamlit function creates a simple bar chart directly from a pandas Series?",
+                    "topic": "Building a Data-Driven Student Insights Dashboard",
+                    "question": "What is the purpose of st.sidebar in a Streamlit app?",
                     "options": [
-                        "st.plot()",
-                        "st.bar_chart()",
-                        "st.barchart()",
-                        "st.chart_bar()"
+                        "To create a new page in the app",
+                        "To place controls like dropdowns and filters in a separate left panel",
+                        "To hide content from users",
+                        "To save the app's data"
                     ],
                     "answer": 1,
-                    "explanation": "st.bar_chart(data) creates a simple bar chart from a pandas Series or DataFrame — no matplotlib or seaborn needed."
-                },
-                {
-                    "question": "What does st.divider() do in a Streamlit app?",
-                    "options": [
-                        "Splits the app into two columns",
-                        "Draws a horizontal line to visually separate sections",
-                        "Divides the data into groups",
-                        "Creates a sidebar"
-                    ],
-                    "answer": 1,
-                    "explanation": "st.divider() draws a horizontal line that helps organize the app by visually separating different sections."
-                },
-                {
-                    "question": "Why do we use 'if uploaded_file is not None:' before reading the CSV?",
-                    "options": [
-                        "To check if the file is in CSV format",
-                        "To prevent the app from crashing if no file has been uploaded yet",
-                        "To validate that the file has no missing values",
-                        "Because pd.read_csv() requires this check"
-                    ],
-                    "answer": 1,
-                    "explanation": "If no file is uploaded and we try to read it, the app will crash. The check ensures we only process data after a file has been successfully uploaded."
-                },
-                {
-                    "question": "Which Streamlit function creates a text input box where users can type?",
-                    "options": [
-                        "st.input()",
-                        "st.write()",
-                        "st.text_input()",
-                        "st.textbox()"
-                    ],
-                    "answer": 2,
-                    "explanation": "st.text_input() or st.sidebar.text_input() creates a single-line text input box and returns whatever the user has typed."
+                    "explanation": "st.sidebar creates a separate panel on the left side where controls like selectbox, text_input, and sliders can be placed."
                 }
             ]
         },
         {
-            "name": "Introduction to Machine Learning",
-            "description": "Covers fundamental ML concepts including classes, labels, training data, model training, predictions, confidence scores, testing, overfitting, and building image, audio, and pose classifiers using Google Teachable Machine.",
+            "name": "Machine Learning",
+            "totalQuestions": 20,
             "mcqs": [
                 {
-                    "question": "In machine learning, what is a 'class' or 'label'?",
+                    "topic": "Introduction to Machine Learning",
+                    "question": "In Google Teachable Machine, why should you collect training samples from different angles and backgrounds?",
                     "options": [
-                        "The name of the Python program",
-                        "A category the model is trained to predict",
-                        "The confidence score percentage",
-                        "The webcam recording button"
-                    ],
-                    "answer": 1,
-                    "explanation": "A class (or label) is a category we want the model to recognize, for example Rock, Paper, or Scissor in a gesture classifier."
-                },
-                {
-                    "question": "What is training data in machine learning?",
-                    "options": [
-                        "Data used only to test if the model works",
-                        "The final predictions made by the model",
-                        "Examples we show the computer so it can learn patterns",
-                        "The name of the dataset file"
+                        "To make the training process faster",
+                        "To increase the confidence score to 100%",
+                        "So the model learns to recognize the pattern in varied conditions, not just one specific setting",
+                        "Because Teachable Machine requires a minimum of 3 backgrounds"
                     ],
                     "answer": 2,
-                    "explanation": "Training data consists of the labeled examples we provide to teach the computer. More diverse training data generally leads to a smarter model."
+                    "explanation": "Collecting diverse training samples (different angles, lighting, backgrounds) teaches the model to focus on the actual pattern rather than incidental details, making it more robust in real-world use."
                 },
                 {
-                    "question": "What does a confidence score of 95% mean when a model predicts 'Rock'?",
-                    "options": [
-                        "The model trained for 95 seconds",
-                        "You collected 95 training images",
-                        "The model is very sure this is Rock",
-                        "There is a 95% chance you will win the game"
-                    ],
-                    "answer": 2,
-                    "explanation": "A confidence score of 95% means the model is very sure about its prediction — only 5% probability remains for other classes."
-                },
-                {
-                    "question": "What is overfitting in machine learning?",
-                    "options": [
-                        "Collecting too many training images",
-                        "When a model memorizes specific details from training instead of learning general patterns",
-                        "When training takes too long",
-                        "When confidence scores are above 100%"
-                    ],
-                    "answer": 1,
-                    "explanation": "Overfitting happens when a model learns specific details of training data (like background color or lighting) instead of the general pattern, causing it to fail on new data."
-                },
-                {
-                    "question": "How can you make a Teachable Machine model work better in different lighting conditions?",
-                    "options": [
-                        "Use a more expensive webcam",
-                        "Only collect training data in bright light",
-                        "Collect diverse training data in different lighting conditions",
-                        "Train the model multiple times without adding new data"
-                    ],
-                    "answer": 2,
-                    "explanation": "Collecting training data in varied lighting conditions teaches the model to recognize the pattern regardless of lighting, making it more robust."
-                },
-                {
+                    "topic": "Introduction to Machine Learning",
                     "question": "Which type of machine learning is used when the computer discovers groups in data without being told what the groups are?",
                     "options": [
                         "Supervised Learning",
@@ -997,59 +273,10 @@
                         "Classification Learning"
                     ],
                     "answer": 2,
-                    "explanation": "Unsupervised Learning finds patterns in unlabeled data. The computer discovers groups or structure on its own without being told the correct answers."
+                    "explanation": "Unsupervised Learning finds patterns in unlabeled data. The computer discovers groups or structure on its own without predefined answers."
                 },
                 {
-                    "question": "What does the 'Train Model' button do in Google Teachable Machine?",
-                    "options": [
-                        "Deletes all your training data",
-                        "Tests your model with new examples",
-                        "Makes the computer learn patterns from all your collected training data",
-                        "Uploads your data to the internet"
-                    ],
-                    "answer": 2,
-                    "explanation": "Clicking 'Train Model' starts the training process — the computer analyzes all collected examples and learns the patterns that distinguish each class."
-                },
-                {
-                    "question": "Why does a pose classification model still work in any lighting or with any clothing?",
-                    "options": [
-                        "Because it uses high-resolution cameras",
-                        "Because it tracks 17 key body points (joints), not pixels or colors",
-                        "Because it ignores the background",
-                        "Because it was trained on all possible clothing types"
-                    ],
-                    "answer": 1,
-                    "explanation": "Pose detection tracks the positions of 17 body joints (like shoulders, elbows, and wrists) rather than pixel colors, making it lighting and clothing independent."
-                },
-                {
-                    "question": "In Reinforcement Learning, how does the computer learn?",
-                    "options": [
-                        "By studying labeled examples",
-                        "By finding groups in unlabeled data",
-                        "By trial and error — receiving rewards for good actions and penalties for bad ones",
-                        "By copying another model's weights"
-                    ],
-                    "answer": 2,
-                    "explanation": "Reinforcement Learning uses trial and error. The agent tries actions, receives rewards for successful ones and penalties for failures, and gradually improves."
-                },
-                {
-                    "question": "What happens when a Teachable Machine model sees a gesture it was never trained on?",
-                    "options": [
-                        "It refuses to make a prediction and shows an error",
-                        "It creates a new class automatically",
-                        "It forces the gesture into one of the existing classes with lower confidence",
-                        "The confidence scores for all classes become 100%"
-                    ],
-                    "answer": 2,
-                    "explanation": "The model must always choose from its existing classes. An unknown gesture gets assigned to the most similar class, usually with lower and more split confidence scores."
-                }
-            ]
-        },
-        {
-            "name": "Linear Regression",
-            "description": "Covers simple linear regression concepts including the y=mx+c formula, the slope and intercept, building models with scikit-learn, splitting data with train_test_split(), evaluating with MAE and R² score, and visualizing the prediction line.",
-            "mcqs": [
-                {
+                    "topic": "Linear Regression",
                     "question": "What does the slope (m) represent in the formula y = mx + c?",
                     "options": [
                         "The starting value when x is zero",
@@ -1061,50 +288,7 @@
                     "explanation": "The slope (m) tells us how much the output (y) changes for every one unit increase in the input (x)."
                 },
                 {
-                    "question": "Which category of machine learning is used when training on labeled data to predict a number?",
-                    "options": [
-                        "Unsupervised Learning",
-                        "Reinforcement Learning",
-                        "Supervised Learning — Classification",
-                        "Supervised Learning — Regression"
-                    ],
-                    "answer": 3,
-                    "explanation": "Predicting a continuous number (like pocket money) from labeled data is a Supervised Learning — Regression problem."
-                },
-                {
-                    "question": "Why do we use double brackets df[['age']] instead of single brackets df['age'] when creating X for sklearn?",
-                    "options": [
-                        "Double brackets make the code run faster",
-                        "Single brackets select multiple columns",
-                        "Double brackets return a DataFrame (2D table) which sklearn requires, instead of a Series (1D list)",
-                        "Double brackets automatically scale the values"
-                    ],
-                    "answer": 2,
-                    "explanation": "sklearn models expect X to be a 2D DataFrame. Single brackets return a 1D Series which causes errors or warnings."
-                },
-                {
-                    "question": "What is the purpose of the test set in machine learning?",
-                    "options": [
-                        "To train the model using the best data",
-                        "To fine-tune the model during training",
-                        "To provide a final honest evaluation of the trained model on unseen data",
-                        "To visualize the data before modeling"
-                    ],
-                    "answer": 2,
-                    "explanation": "The test set contains data the model never saw during training. It gives an honest evaluation of how well the model generalizes to new data."
-                },
-                {
-                    "question": "Which R² score would indicate an excellent Linear Regression model?",
-                    "options": [
-                        "0.25",
-                        "0.50",
-                        "0.75",
-                        "0.95"
-                    ],
-                    "answer": 3,
-                    "explanation": "R² ranges from 0 to 1. A score of 0.95 means the model explains 95% of the variation in the data — an excellent fit."
-                },
-                {
+                    "topic": "Linear Regression",
                     "question": "What does MAE (Mean Absolute Error) measure?",
                     "options": [
                         "The maximum error made by any single prediction",
@@ -1116,78 +300,7 @@
                     "explanation": "MAE calculates the average absolute difference between actual and predicted values. A lower MAE means more accurate predictions."
                 },
                 {
-                    "question": "What does random_state=42 do in train_test_split()?",
-                    "options": [
-                        "Makes the model more accurate",
-                        "Shuffles the data in reverse order",
-                        "Fixes the random shuffle so everyone gets the same split each run",
-                        "Sets the number of splits to 42"
-                    ],
-                    "answer": 2,
-                    "explanation": "random_state fixes the random shuffle used during splitting. Anyone using the same random_state value will get identical training and test sets, enabling reproducible results."
-                },
-                {
-                    "question": "Where does scikit-learn store the learned slope (m) after training a LinearRegression model?",
-                    "options": [
-                        "model.slope_",
-                        "model.m_",
-                        "model.coef_",
-                        "model.gradient_"
-                    ],
-                    "answer": 2,
-                    "explanation": "After training, scikit-learn stores the slope (coefficient) in model.coef_ and the intercept (c) in model.intercept_."
-                },
-                {
-                    "question": "Which method is used to generate predictions on the test set after training a model?",
-                    "options": [
-                        "model.fit()",
-                        "model.predict()",
-                        "model.evaluate()",
-                        "model.run()"
-                    ],
-                    "answer": 1,
-                    "explanation": "model.predict(X_test) uses the trained model to generate predictions for the test data."
-                },
-                {
-                    "question": "What does the red prediction line in a regression visualization represent?",
-                    "options": [
-                        "The actual data points from the dataset",
-                        "The error in predictions",
-                        "The best-fit line the model learned, showing the overall trend",
-                        "The boundary between training and test data"
-                    ],
-                    "answer": 2,
-                    "explanation": "The prediction line represents the pattern (formula) the model learned. It shows the overall trend but does not pass through every data point because real data has variation."
-                }
-            ]
-        },
-        {
-            "name": "Multiple Linear Regression",
-            "description": "Covers using multiple input features to predict a single output, feature scaling with StandardScaler, interpreting coefficients, uploading files via google.colab, and understanding how each feature contributes to predictions.",
-            "mcqs": [
-                {
-                    "question": "What is the key difference between Simple and Multiple Linear Regression?",
-                    "options": [
-                        "Multiple Linear Regression can only classify, not predict numbers",
-                        "Multiple Linear Regression uses several input features instead of just one",
-                        "Multiple Linear Regression does not use a formula",
-                        "Simple Linear Regression is always more accurate"
-                    ],
-                    "answer": 1,
-                    "explanation": "Multiple Linear Regression uses several input features (like weight, duration, age, and intensity) instead of just one to make predictions."
-                },
-                {
-                    "question": "In the formula y = m₁x₁ + m₂x₂ + c, what does m₂ represent?",
-                    "options": [
-                        "The output value",
-                        "The second input value",
-                        "How much y changes when x₂ increases by 1, with all other inputs held constant",
-                        "The total number of input features"
-                    ],
-                    "answer": 2,
-                    "explanation": "Each coefficient (m) represents how much the output changes when that specific input increases by 1, while all other inputs remain the same."
-                },
-                {
+                    "topic": "Multiple Linear Regression",
                     "question": "Why is feature scaling important before training a Multiple Linear Regression model?",
                     "options": [
                         "It makes the training data smaller",
@@ -1196,20 +309,10 @@
                         "It removes missing values automatically"
                     ],
                     "answer": 2,
-                    "explanation": "Features like weight (70 kg) and intensity (1–10) have very different scales. Scaling brings them to a similar range so the model treats them fairly."
+                    "explanation": "Features like weight (70 kg) and intensity (1-10) have very different scales. Scaling brings them to a similar range so the model treats each fairly."
                 },
                 {
-                    "question": "Which scikit-learn tool scales features to have a mean of 0 and standard deviation of 1?",
-                    "options": [
-                        "MinMaxScaler",
-                        "Normalizer",
-                        "StandardScaler",
-                        "RobustScaler"
-                    ],
-                    "answer": 2,
-                    "explanation": "StandardScaler transforms each feature using the formula z = (x - mean) / standard_deviation, resulting in a mean of 0 and standard deviation of 1."
-                },
-                {
+                    "topic": "Multiple Linear Regression",
                     "question": "Why do we use fit_transform() on training data but only transform() on test data?",
                     "options": [
                         "transform() is faster than fit_transform()",
@@ -1218,92 +321,10 @@
                         "They produce identical results so the choice does not matter"
                     ],
                     "answer": 1,
-                    "explanation": "Using fit_transform() on test data would allow the scaler to learn from test information, making evaluation unfair. This is called data leakage."
+                    "explanation": "Using fit_transform() on test data allows the scaler to learn from test information, making evaluation unfair. This is called data leakage."
                 },
                 {
-                    "question": "Which library from google.colab allows you to upload files directly through code?",
-                    "options": [
-                        "google.colab.upload",
-                        "colab.files",
-                        "files (from google.colab)",
-                        "google.upload"
-                    ],
-                    "answer": 2,
-                    "explanation": "Importing 'files' from 'google.colab' allows you to use files.upload() to open a file picker and upload datasets directly."
-                },
-                {
-                    "question": "A Multiple Linear Regression model has R² = 0.88 and MAE = 12 calories. What does this tell us?",
-                    "options": [
-                        "The model is wrong 88% of the time and off by 12 calories on average",
-                        "The model explains 88% of the variation in calories and is off by 12 calories on average",
-                        "The model needs 88 more data points and 12 more features",
-                        "The model is 12% accurate"
-                    ],
-                    "answer": 1,
-                    "explanation": "R²=0.88 means 88% of the variation in the output is explained by the model. MAE=12 means predictions are off by 12 calories on average."
-                },
-                {
-                    "question": "After scaling with StandardScaler, what does a coefficient of -0.35 for 'age' tell us?",
-                    "options": [
-                        "Age has no impact on the prediction",
-                        "The model should ignore age",
-                        "As age increases, the predicted output slightly decreases",
-                        "The model made an error for this feature"
-                    ],
-                    "answer": 2,
-                    "explanation": "A negative coefficient means the output decreases when that input increases. For age, it means older people tend to burn slightly fewer calories."
-                },
-                {
-                    "question": "How do we determine which feature is most important in a Multiple Linear Regression model?",
-                    "options": [
-                        "The feature with the highest raw value is most important",
-                        "The feature listed first in the data is always most important",
-                        "The feature with the largest absolute coefficient value after scaling has the greatest influence",
-                        "Importance cannot be determined in Multiple Linear Regression"
-                    ],
-                    "answer": 2,
-                    "explanation": "After scaling, the feature with the largest absolute coefficient value contributes the most to the prediction."
-                },
-                {
-                    "question": "When a user provides new input values for a Multiple Linear Regression model, what must be done before predicting?",
-                    "options": [
-                        "Retrain the model with the new values",
-                        "Scale the new input using the same scaler fitted on training data",
-                        "Re-fit the StandardScaler on the new values",
-                        "Nothing extra is needed"
-                    ],
-                    "answer": 1,
-                    "explanation": "New inputs must be scaled using scaler.transform() — not re-fitted — before passing to the model, since the model was trained on scaled data."
-                }
-            ]
-        },
-        {
-            "name": "Logistic Regression",
-            "description": "Covers the difference between regression and classification, why Linear Regression fails for classification, the sigmoid S-curve, building a LogisticRegression model, using predict() vs predict_proba(), and evaluating with accuracy score and confusion matrix.",
-            "mcqs": [
-                {
-                    "question": "What is the key difference between a regression problem and a classification problem?",
-                    "options": [
-                        "Regression uses more data than classification",
-                        "Regression predicts a number, classification predicts a category",
-                        "Classification uses a straight line, regression uses a curve",
-                        "Regression is always more accurate"
-                    ],
-                    "answer": 1,
-                    "explanation": "Regression predicts continuous numbers (like salary), while classification predicts discrete categories (like Pass/Fail or Spam/Not Spam)."
-                },
-                {
-                    "question": "Why can't we use Linear Regression for classification problems?",
-                    "options": [
-                        "Linear Regression is too slow",
-                        "Linear Regression requires more data",
-                        "Linear Regression can predict values outside 0 to 1, which makes no sense for class probabilities",
-                        "Linear Regression cannot handle two classes"
-                    ],
-                    "answer": 2,
-                    "explanation": "Linear Regression produces values from -∞ to +∞. For classification we need values between 0 and 1 representing probabilities — the sigmoid function achieves this."
-                },
-                {
+                    "topic": "Logistic Regression",
                     "question": "What does the sigmoid function always output, regardless of the input?",
                     "options": [
                         "A value between -1 and 1",
@@ -1312,42 +333,10 @@
                         "A whole number"
                     ],
                     "answer": 1,
-                    "explanation": "The sigmoid function maps any input value to an output between 0 and 1, making it ideal for representing probabilities."
+                    "explanation": "The sigmoid function maps any input value to an output between 0 and 1, making it ideal for representing class probabilities."
                 },
                 {
-                    "question": "What is the decision boundary in Logistic Regression?",
-                    "options": [
-                        "The maximum probability allowed",
-                        "The point at probability 0.5 where the model switches from predicting one class to another",
-                        "The threshold for selecting training data",
-                        "The boundary between training and test sets"
-                    ],
-                    "answer": 1,
-                    "explanation": "The decision boundary at 0.5 is where the model switches its prediction. Values above 0.5 predict class 1 (e.g., Pass), values below predict class 0 (e.g., Fail)."
-                },
-                {
-                    "question": "A model predicts a student will pass with probability 0.72. What will model.predict() return for this student?",
-                    "options": [
-                        "0.72",
-                        "0 (Fail)",
-                        "1 (Pass)",
-                        "72"
-                    ],
-                    "answer": 2,
-                    "explanation": "model.predict() returns 1 (Pass) because 0.72 is above the decision boundary of 0.5."
-                },
-                {
-                    "question": "What is the difference between model.predict() and model.predict_proba()?",
-                    "options": [
-                        "They are identical in output",
-                        "predict() gives the class label (0 or 1), predict_proba() gives the probability for each class",
-                        "predict_proba() gives class labels, predict() gives probabilities",
-                        "predict() only works on training data"
-                    ],
-                    "answer": 1,
-                    "explanation": "predict() returns the final class label (0 or 1). predict_proba() returns the probability for each class, showing how confident the model is."
-                },
-                {
+                    "topic": "Logistic Regression",
                     "question": "In a confusion matrix for a Pass/Fail classifier, what is a False Negative?",
                     "options": [
                         "The model predicted Pass and the student actually Passed",
@@ -1356,70 +345,10 @@
                         "The model predicted Fail but the student actually Passed"
                     ],
                     "answer": 3,
-                    "explanation": "A False Negative means the model predicted Negative (Fail) but the actual outcome was Positive (Pass) — the model incorrectly said the student would fail."
+                    "explanation": "A False Negative means the model predicted Negative (Fail) but the actual outcome was Positive (Pass) — it incorrectly said the student would fail."
                 },
                 {
-                    "question": "What does accuracy_score() calculate?",
-                    "options": [
-                        "The average error in predictions",
-                        "The percentage of all predictions that were correct",
-                        "How confident the model is in its predictions",
-                        "The number of false positives"
-                    ],
-                    "answer": 1,
-                    "explanation": "accuracy_score() calculates what fraction (or percentage) of all predictions matched the actual labels."
-                },
-                {
-                    "question": "Which scikit-learn class is used to build a Logistic Regression classifier?",
-                    "options": [
-                        "sklearn.regression.LogisticModel",
-                        "sklearn.linear_model.LogisticRegression",
-                        "sklearn.classification.Logistic",
-                        "sklearn.model.LogisticClassifier"
-                    ],
-                    "answer": 1,
-                    "explanation": "LogisticRegression is imported from sklearn.linear_model and used to build classification models."
-                },
-                {
-                    "question": "Why should we check class distribution (value_counts()) before training a classifier?",
-                    "options": [
-                        "To find missing values in the target column",
-                        "To make sure both classes have similar counts, since a heavily imbalanced dataset can produce misleading accuracy",
-                        "To check if the column contains numbers or text",
-                        "To sort the data before training"
-                    ],
-                    "answer": 1,
-                    "explanation": "If 95% of data belongs to one class, a model could get 95% accuracy by always predicting that class — without learning anything useful."
-                }
-            ]
-        },
-        {
-            "name": "Decision Trees",
-            "description": "Covers how Decision Trees make decisions using if/else rules, when they outperform Logistic Regression, using DecisionTreeClassifier and plot_tree from sklearn, feature importance scores, gini impurity, and visualizing the confusion matrix with seaborn heatmap.",
-            "mcqs": [
-                {
-                    "question": "How do Decision Trees make decisions?",
-                    "options": [
-                        "By drawing a diagonal line through the data",
-                        "By asking a sequence of yes/no questions",
-                        "By calculating probabilities using the sigmoid function",
-                        "By finding the average of nearby data points"
-                    ],
-                    "answer": 1,
-                    "explanation": "Decision Trees ask a series of yes/no questions about the input features, splitting the data at each step until reaching a final prediction."
-                },
-                {
-                    "question": "What shape are the decision boundaries created by a Decision Tree?",
-                    "options": [
-                        "Diagonal lines",
-                        "Curves",
-                        "Rectangles",
-                        "Circles"
-                    ],
-                    "answer": 2,
-                    "explanation": "Decision Trees create rectangular decision regions rather than straight lines, making them more flexible for complex, non-linear patterns."
-                },
-                {
+                    "topic": "Decision Trees",
                     "question": "What does max_depth=4 control in a DecisionTreeClassifier?",
                     "options": [
                         "The minimum number of samples in each leaf",
@@ -1428,20 +357,10 @@
                         "The number of classes the tree can predict"
                     ],
                     "answer": 2,
-                    "explanation": "max_depth limits the tree to a maximum number of levels. This prevents the tree from growing too complex and overfitting the training data."
+                    "explanation": "max_depth limits the tree to a maximum number of levels, preventing it from growing too complex and overfitting the training data."
                 },
                 {
-                    "question": "If a feature has importance = 0.45, what does this tell us?",
-                    "options": [
-                        "The feature appears in 45% of the training data",
-                        "The feature contributed 45% toward making good splits in the tree",
-                        "The feature has 45 unique values",
-                        "The feature is in the 45th column"
-                    ],
-                    "answer": 1,
-                    "explanation": "Feature importance scores show each feature's contribution to the tree's splits. 0.45 means that feature was responsible for 45% of the information gain."
-                },
-                {
+                    "topic": "Decision Trees",
                     "question": "In a tree visualization, what does the 'gini' value represent?",
                     "options": [
                         "The number of samples at that node",
@@ -1450,103 +369,10 @@
                         "The depth of that node in the tree"
                     ],
                     "answer": 2,
-                    "explanation": "Gini is the impurity measure — a lower gini value means the node is purer (mostly one class). A gini of 0 means all samples belong to one class."
+                    "explanation": "Gini is the impurity measure — lower means the node is purer (mostly one class). A gini of 0 means all samples belong to one class."
                 },
                 {
-                    "question": "Which function from sklearn.tree draws a visual diagram of a trained Decision Tree?",
-                    "options": [
-                        "draw_tree()",
-                        "visualize_tree()",
-                        "plot_tree()",
-                        "show_tree()"
-                    ],
-                    "answer": 2,
-                    "explanation": "plot_tree() from sklearn.tree draws a complete visual diagram of the Decision Tree, showing questions, sample counts, and class predictions at each node."
-                },
-                {
-                    "question": "When does a Decision Tree typically perform better than Logistic Regression?",
-                    "options": [
-                        "When you have very little data",
-                        "When the classes are separated by a straight line",
-                        "When there are complex, non-linear patterns in the data",
-                        "Decision Trees always perform worse than Logistic Regression"
-                    ],
-                    "answer": 2,
-                    "explanation": "Decision Trees excel at complex, non-linear patterns where multiple conditions combine (AND/OR logic). Logistic Regression struggles with these."
-                },
-                {
-                    "question": "What happens if you train a Decision Tree without setting max_depth?",
-                    "options": [
-                        "The tree will train faster",
-                        "The tree will likely overfit by memorizing training data",
-                        "The tree will have better accuracy on test data",
-                        "The tree will use fewer features"
-                    ],
-                    "answer": 1,
-                    "explanation": "Without max_depth, the tree grows until every leaf is pure, memorizing training data. This causes overfitting — poor performance on new data."
-                },
-                {
-                    "question": "In a Decision Tree confusion matrix, what is a False Negative for earthquake damage prediction?",
-                    "options": [
-                        "Predicted Severe, actually Severe — correct",
-                        "Predicted Minor, actually Minor — correct",
-                        "Predicted Severe, actually Minor — wrong",
-                        "Predicted Minor, actually Severe — wrong and most dangerous"
-                    ],
-                    "answer": 3,
-                    "explanation": "A False Negative means the model predicted Minor damage but the earthquake actually caused Severe damage — the most dangerous error in disaster response."
-                },
-                {
-                    "question": "How does a Decision Tree calculate prediction probability in model.predict_proba()?",
-                    "options": [
-                        "It uses the sigmoid function like Logistic Regression",
-                        "It uses the fraction of training samples in the leaf node belonging to each class",
-                        "It averages probabilities across all tree levels",
-                        "It calculates the distance from the nearest class center"
-                    ],
-                    "answer": 1,
-                    "explanation": "When a sample reaches a leaf, the probability is the proportion of training samples in that leaf belonging to each class. For example, 17 out of 20 severe = P(Severe) = 0.85."
-                }
-            ]
-        },
-        {
-            "name": "Clustering with K-Means",
-            "description": "Covers unsupervised learning, K-Means algorithm steps, using the Elbow Method to choose optimal K, inertia, visualizing clusters, interpreting cluster centers with kmeans.labels_ and kmeans.cluster_centers_, and predicting new data point clusters.",
-            "mcqs": [
-                {
-                    "question": "What is the key difference between supervised and unsupervised learning?",
-                    "options": [
-                        "Supervised learning is always faster",
-                        "Supervised learning has labeled data, unsupervised learning does not",
-                        "Unsupervised learning is always more accurate",
-                        "They are the same thing with different names"
-                    ],
-                    "answer": 1,
-                    "explanation": "Supervised learning uses labeled data where we know the correct answers. Unsupervised learning finds patterns in unlabeled data without predefined answers."
-                },
-                {
-                    "question": "What does K represent in K-Means clustering?",
-                    "options": [
-                        "The number of features in the data",
-                        "The number of clusters to find",
-                        "The number of data points",
-                        "The number of iterations the algorithm runs"
-                    ],
-                    "answer": 1,
-                    "explanation": "K is the number of clusters (groups) you want the algorithm to find. You must choose K before running the algorithm."
-                },
-                {
-                    "question": "What is inertia in K-Means clustering?",
-                    "options": [
-                        "The number of clusters chosen",
-                        "The sum of squared distances from each data point to its nearest cluster center",
-                        "The number of iterations the algorithm ran",
-                        "The accuracy score of the clustering"
-                    ],
-                    "answer": 1,
-                    "explanation": "Inertia measures how tight the clusters are — the sum of squared distances from each point to its cluster center. Lower inertia means tighter, better clusters."
-                },
-                {
+                    "topic": "Clustering with K-Means",
                     "question": "In the Elbow Method, where should you choose K?",
                     "options": [
                         "At the highest point on the inertia graph",
@@ -1558,17 +384,7 @@
                     "explanation": "The optimal K is at the 'elbow' — the point where adding more clusters gives diminishing returns in reducing inertia."
                 },
                 {
-                    "question": "What does kmeans.labels_ give you after training?",
-                    "options": [
-                        "The coordinates of each cluster center",
-                        "The cluster number assigned to each data point",
-                        "The inertia value of the model",
-                        "The number of clusters found"
-                    ],
-                    "answer": 1,
-                    "explanation": "kmeans.labels_ returns an array where each element is the cluster number (0, 1, 2, etc.) assigned to the corresponding data point."
-                },
-                {
+                    "topic": "Clustering with K-Means",
                     "question": "What does kmeans.cluster_centers_ give you?",
                     "options": [
                         "The cluster label for each data point",
@@ -1580,56 +396,7 @@
                     "explanation": "kmeans.cluster_centers_ gives the coordinates of each cluster's center — the average position of all points assigned to that cluster."
                 },
                 {
-                    "question": "Why is n_init=10 used when creating a KMeans model?",
-                    "options": [
-                        "It limits the dataset to 10 data points",
-                        "It runs the algorithm 10 times with different initial centers and keeps the best result",
-                        "It sets the maximum number of clusters to 10",
-                        "It restricts training to 10 iterations"
-                    ],
-                    "answer": 1,
-                    "explanation": "K-Means results depend on the initial random placement of cluster centers. n_init=10 runs the algorithm 10 times and keeps the result with the lowest inertia."
-                },
-                {
-                    "question": "How do you predict which cluster a new customer belongs to after training?",
-                    "options": [
-                        "Call kmeans.fit() again with the new customer data",
-                        "Use kmeans.predict() with the new customer's feature values",
-                        "Re-run the Elbow Method",
-                        "New data cannot be assigned to existing clusters"
-                    ],
-                    "answer": 1,
-                    "explanation": "kmeans.predict() assigns new data points to the nearest cluster center without retraining the model."
-                },
-                {
-                    "question": "In mall customer segmentation, what would Cluster 0 (low income, low spending) suggest for business strategy?",
-                    "options": [
-                        "Focus on luxury items and premium services",
-                        "Target with discounts, value deals, and budget-friendly products",
-                        "These customers should be excluded from marketing",
-                        "Offer the same products as all other clusters"
-                    ],
-                    "answer": 1,
-                    "explanation": "Customers with low income and low spending are budget-conscious shoppers. Discounts and value deals are the most appropriate marketing strategy for this group."
-                },
-                {
-                    "question": "Can K-Means clustering be applied to labeled data?",
-                    "options": [
-                        "No, K-Means only works on unlabeled data",
-                        "Yes, but it ignores the labels and clusters based on feature similarity only",
-                        "No, it will produce an error",
-                        "Yes, and it uses the labels to improve the clustering quality"
-                    ],
-                    "answer": 1,
-                    "explanation": "K-Means can technically run on labeled data, but it ignores the labels — it clusters purely based on the numerical features."
-                }
-            ]
-        },
-        {
-            "name": "Natural Language Processing (NLP)",
-            "description": "Covers why text needs special treatment, preprocessing steps including tokenization, stopword removal, and lemmatization, building a reusable preprocess() function, and analyzing word frequencies with Counter.",
-            "mcqs": [
-                {
+                    "topic": "Natural Language Processing (NLP)",
                     "question": "What is tokenization in NLP?",
                     "options": [
                         "Removing common words from text",
@@ -1641,17 +408,7 @@
                     "explanation": "Tokenization splits a sentence into individual words or tokens. For example, 'NASA hides proof' becomes ['NASA', 'hides', 'proof']."
                 },
                 {
-                    "question": "Why do we remove stopwords before analyzing text?",
-                    "options": [
-                        "Because they make the vocabulary too small",
-                        "Because they appear in almost every document and carry no useful signal for classification",
-                        "Because they cause the model to overfit",
-                        "Because NLTK cannot process them"
-                    ],
-                    "answer": 1,
-                    "explanation": "Stopwords like 'the', 'is', and 'and' appear in virtually every text and provide no information to distinguish one document from another."
-                },
-                {
+                    "topic": "Natural Language Processing (NLP)",
                     "question": "What does lemmatization do to the word 'hiding'?",
                     "options": [
                         "Removes it as a stopword",
@@ -1663,111 +420,7 @@
                     "explanation": "Lemmatization converts a word to its base (lemma) form. 'hiding' becomes 'hide', 'running' becomes 'run', and 'cities' becomes 'city'."
                 },
                 {
-                    "question": "Which Python library provides the word_tokenize() function for NLP?",
-                    "options": [
-                        "spacy",
-                        "sklearn",
-                        "nltk",
-                        "textblob"
-                    ],
-                    "answer": 2,
-                    "explanation": "NLTK (Natural Language Toolkit) provides word_tokenize(), stopwords, and WordNetLemmatizer for text preprocessing."
-                },
-                {
-                    "question": "What does re.sub(r'[^a-zA-Z\\s]', '', text) do to a sentence?",
-                    "options": [
-                        "Removes all letters and keeps only punctuation",
-                        "Removes all punctuation and special characters, keeping only letters and spaces",
-                        "Converts all letters to uppercase",
-                        "Splits the text into individual words"
-                    ],
-                    "answer": 1,
-                    "explanation": "The pattern r'[^a-zA-Z\\s]' means 'anything that is NOT a letter or space'. re.sub() replaces all such characters with an empty string."
-                },
-                {
-                    "question": "Why do we convert text to a set when working with stopwords?",
-                    "options": [
-                        "Sets automatically sort words alphabetically",
-                        "Sets store duplicate words",
-                        "Checking membership in a set is much faster than checking in a list",
-                        "Sets automatically remove stopwords"
-                    ],
-                    "answer": 2,
-                    "explanation": "Set membership lookup (word in stop_words) is nearly instant regardless of size. List lookup is much slower as it scans every element."
-                },
-                {
-                    "question": "What does Counter('apple banana apple cherry apple banana'.split()).most_common(2) return?",
-                    "options": [
-                        "All unique words sorted alphabetically",
-                        "The two most frequently occurring words with their counts",
-                        "The two least frequent words",
-                        "The total number of words"
-                    ],
-                    "answer": 1,
-                    "explanation": "Counter counts occurrences, and most_common(2) returns the top 2 items with the highest counts — in this case apple (3) and banana (2)."
-                },
-                {
-                    "question": "What does the apply() method do when used with the preprocess() function on a DataFrame column?",
-                    "options": [
-                        "Applies the function to only the first row",
-                        "Runs the preprocess() function on every value in the column",
-                        "Applies the function to every column in the DataFrame",
-                        "Creates a new DataFrame with preprocessed columns"
-                    ],
-                    "answer": 1,
-                    "explanation": "df['column'].apply(function) runs the specified function on every single value in that column, creating a new Series with the results."
-                },
-                {
-                    "question": "Looking at word frequencies in fake vs real news headlines, fake news typically contains words like 'alien', 'secret', and 'shock'. What does this suggest?",
-                    "options": [
-                        "Fake news is always shorter than real news",
-                        "Fake news uses sensational, dramatic language while real news uses measured, institutional language",
-                        "Word frequency analysis is not useful for fake news detection",
-                        "Real news never uses any of these words"
-                    ],
-                    "answer": 1,
-                    "explanation": "Fake news tends to use dramatic, sensational words to attract attention. Real news uses more measured, factual language. These patterns are detectable through word frequency analysis."
-                },
-                {
-                    "question": "What is the correct order of preprocessing steps in the NLP pipeline taught in class?",
-                    "options": [
-                        "Tokenize → Lowercase → Remove punctuation → Remove stopwords → Lemmatize",
-                        "Lowercase → Remove punctuation → Tokenize → Remove stopwords → Lemmatize",
-                        "Remove stopwords → Lowercase → Tokenize → Lemmatize → Remove punctuation",
-                        "Lemmatize → Tokenize → Lowercase → Remove stopwords → Remove punctuation"
-                    ],
-                    "answer": 1,
-                    "explanation": "The correct pipeline is: Lowercase → Remove punctuation → Tokenize → Remove stopwords → Lemmatize. This order ensures each step works correctly on the output of the previous step."
-                }
-            ]
-        },
-        {
-            "name": "Text Classification with Decision Trees",
-            "description": "Covers converting text to numbers using Bag of Words (CountVectorizer) and TF-IDF (TfidfVectorizer), the difference between the two approaches, using fit_transform() on training data and transform() on test data, and building a Fake News Detector with a Decision Tree.",
-            "mcqs": [
-                {
-                    "question": "What does Bag of Words (CountVectorizer) store in each cell of its matrix?",
-                    "options": [
-                        "The TF-IDF score for that word in that document",
-                        "The number of times that word appears in that document",
-                        "1 if the word appears, 0 if it does not",
-                        "The importance score assigned by the Decision Tree"
-                    ],
-                    "answer": 1,
-                    "explanation": "Bag of Words counts raw word occurrences — each cell contains the count of how many times that word appears in that document."
-                },
-                {
-                    "question": "What is the main weakness of the Bag of Words approach?",
-                    "options": [
-                        "It is too slow for large datasets",
-                        "It treats all words equally regardless of how common or rare they are",
-                        "It cannot handle text that contains numbers",
-                        "It requires manual vocabulary creation"
-                    ],
-                    "answer": 1,
-                    "explanation": "Bag of Words gives equal weight to all words. A word like 'government' appearing in both fake and real news gets the same count as a distinctive word like 'alien'."
-                },
-                {
+                    "topic": "Text Classification with Decision Trees",
                     "question": "What does TF-IDF stand for?",
                     "options": [
                         "Text Feature — Inverse Document Frequency",
@@ -1776,9 +429,10 @@
                         "Text Filtering — Indexed Document Format"
                     ],
                     "answer": 1,
-                    "explanation": "TF-IDF stands for Term Frequency — Inverse Document Frequency. It scores words based on how often they appear in a document relative to how common they are across all documents."
+                    "explanation": "TF-IDF stands for Term Frequency — Inverse Document Frequency. It scores words based on how often they appear in a document relative to how common they are overall."
                 },
                 {
+                    "topic": "Text Classification with Decision Trees",
                     "question": "A word appears in almost every document in the dataset. What will its TF-IDF score be?",
                     "options": [
                         "Very high, because it appears so frequently",
@@ -1790,89 +444,7 @@
                     "explanation": "IDF penalizes common words. A word in almost every document has very low discriminating power, resulting in a low TF-IDF score."
                 },
                 {
-                    "question": "Why do we use vectorizer.transform() on test data instead of vectorizer.fit_transform()?",
-                    "options": [
-                        "transform() runs faster on smaller datasets",
-                        "To avoid the vectorizer learning vocabulary from test data — it must use only what it learned from training data",
-                        "Because fit_transform() does not work after training",
-                        "To keep the vocabulary size consistent with max_features"
-                    ],
-                    "answer": 1,
-                    "explanation": "Using fit_transform() on test data would let the vectorizer learn new vocabulary from test examples, making the evaluation unfair. transform() only applies the existing vocabulary."
-                },
-                {
-                    "question": "Which function is used to get the list of words in the vocabulary after fitting a CountVectorizer?",
-                    "options": [
-                        "vectorizer.get_words()",
-                        "vectorizer.vocabulary_",
-                        "vectorizer.get_feature_names_out()",
-                        "vectorizer.word_list()"
-                    ],
-                    "answer": 2,
-                    "explanation": "get_feature_names_out() returns an array of all words in the vocabulary — one word per feature column in the matrix."
-                },
-                {
-                    "question": "Why do we convert string labels ('fake', 'real') to numbers (1, 0) before training a Decision Tree?",
-                    "options": [
-                        "To make the labels shorter",
-                        "Because machine learning models require numerical inputs and outputs",
-                        "Because pandas cannot store string labels in a column",
-                        "To speed up the training process"
-                    ],
-                    "answer": 1,
-                    "explanation": "Machine learning models work with numbers. Converting 'fake' to 1 and 'real' to 0 gives the model a numerical target to learn from."
-                },
-                {
-                    "question": "In a Fake News Detector confusion matrix, which error is most harmful?",
-                    "options": [
-                        "False Positive — predicting fake news as real",
-                        "True Negative — correctly identifying real news",
-                        "False Negative — predicting fake news as real and letting it pass through undetected",
-                        "True Positive — correctly identifying fake news"
-                    ],
-                    "answer": 2,
-                    "explanation": "A False Negative means fake news was classified as real and passed through the filter undetected — the most dangerous error for a fake news detection system."
-                },
-                {
-                    "question": "What does max_features=500 do in TfidfVectorizer?",
-                    "options": [
-                        "Limits the dataset to 500 documents",
-                        "Keeps only the 500 most frequent and important words in the vocabulary",
-                        "Creates 500 clusters from the text",
-                        "Sets the maximum document length to 500 characters"
-                    ],
-                    "answer": 1,
-                    "explanation": "max_features=500 limits the vocabulary to the 500 most important words. This reduces memory usage while keeping the most informative features."
-                },
-                {
-                    "question": "When predicting on new headlines after training a Fake News Detector, which step must come first?",
-                    "options": [
-                        "Call model.fit() with the new headlines",
-                        "Preprocess the new headline and then use vectorizer.transform() to convert it to TF-IDF features",
-                        "Use vectorizer.fit_transform() on the new headline",
-                        "Retrain the entire model with the new data included"
-                    ],
-                    "answer": 1,
-                    "explanation": "New headlines must first be preprocessed using the same preprocess() function, then converted using vectorizer.transform() (not fit_transform()) before calling model.predict()."
-                }
-            ]
-        },
-        {
-            "name": "Introduction to Hugging Face and Pre-Trained Models",
-            "description": "Covers what pre-trained models are, Transformers and attention mechanisms, setting up the Hugging Face Inference API with a .env file, performing sentiment analysis with DistilBERT, and text summarization with BART.",
-            "mcqs": [
-                {
-                    "question": "What is a pre-trained model?",
-                    "options": [
-                        "A model you train yourself on your own dataset",
-                        "A model already trained on large datasets by someone else, available to use directly",
-                        "A model that has been tested but not yet deployed",
-                        "A model that only works on text data"
-                    ],
-                    "answer": 1,
-                    "explanation": "A pre-trained model has already been trained by someone else on enormous amounts of data using powerful computers. You can use it directly without training."
-                },
-                {
+                    "topic": "Introduction to Hugging Face and Pre-Trained Models",
                     "question": "What makes Transformer models different from earlier language models?",
                     "options": [
                         "They read text one word at a time from left to right",
@@ -1884,6 +456,7 @@
                     "explanation": "Transformers use an attention mechanism that processes all words simultaneously and understands how words relate to each other regardless of distance."
                 },
                 {
+                    "topic": "Introduction to Hugging Face and Pre-Trained Models",
                     "question": "Why do we store the Hugging Face API token in a .env file instead of directly in the code?",
                     "options": [
                         "Because the Inference API only accepts tokens from .env files",
@@ -1895,111 +468,7 @@
                     "explanation": "Pasting a token directly in code makes it visible if the file is shared or pushed to GitHub. Storing it in .env keeps it secret."
                 },
                 {
-                    "question": "Which pre-trained model was used for sentiment analysis in class?",
-                    "options": [
-                        "facebook/bart-large-cnn",
-                        "distilbert/distilbert-base-uncased-finetuned-sst-2-english",
-                        "openai/gpt-4",
-                        "google/bert-base-uncased"
-                    ],
-                    "answer": 1,
-                    "explanation": "distilbert/distilbert-base-uncased-finetuned-sst-2-english is a lightweight BERT model fine-tuned for sentiment classification (positive/negative)."
-                },
-                {
-                    "question": "Which pre-trained model was used for text summarization in class?",
-                    "options": [
-                        "distilbert/distilbert-base-uncased",
-                        "google/t5-small",
-                        "facebook/bart-large-cnn",
-                        "openai/whisper"
-                    ],
-                    "answer": 2,
-                    "explanation": "facebook/bart-large-cnn is a BART model fine-tuned on the CNN/DailyMail dataset, making it excellent at summarizing news articles."
-                },
-                {
-                    "question": "What does the InferenceClient object allow us to do?",
-                    "options": [
-                        "Train new machine learning models locally",
-                        "Connect our Python program to Hugging Face's servers to use hosted pre-trained models",
-                        "Download the entire model to our computer",
-                        "Convert text to CSV format"
-                    ],
-                    "answer": 1,
-                    "explanation": "InferenceClient connects our Python code to the Hugging Face Inference API, allowing us to send text and receive predictions from hosted models."
-                },
-                {
-                    "question": "What does the text_classification() method of InferenceClient return for sentiment analysis?",
-                    "options": [
-                        "A string saying 'POSITIVE' or 'NEGATIVE'",
-                        "A list of prediction objects each containing a label and a score",
-                        "A number between 0 and 1",
-                        "A DataFrame of all possible sentiments"
-                    ],
-                    "answer": 1,
-                    "explanation": "text_classification() returns a list of prediction objects. Each object has a label (e.g., 'POSITIVE') and a score (confidence between 0 and 1)."
-                },
-                {
-                    "question": "What does the summarization() method return from the Hugging Face API?",
-                    "options": [
-                        "A list of keywords from the text",
-                        "A dictionary containing the key 'summary_text' with the generated summary",
-                        "A percentage showing how much was compressed",
-                        "A new DataFrame with summarized columns"
-                    ],
-                    "answer": 1,
-                    "explanation": "summarization() returns a dictionary. The generated summary is accessed using result['summary_text']."
-                },
-                {
-                    "question": "Which Python function reads variables from a .env file into the program's environment?",
-                    "options": [
-                        "os.read_env()",
-                        "load_dotenv()",
-                        "env.load()",
-                        "dotenv.read()"
-                    ],
-                    "answer": 1,
-                    "explanation": "load_dotenv() from the dotenv library reads the .env file and makes its variables available through os.getenv()."
-                },
-                {
-                    "question": "Compared to our custom Decision Tree Fake News Detector, what is a key advantage of Hugging Face pre-trained models?",
-                    "options": [
-                        "They are always more accurate on every task",
-                        "They require no labeled data and can perform hundreds of different NLP tasks with just a few lines of code",
-                        "They are completely free with no usage limits",
-                        "They work without an internet connection"
-                    ],
-                    "answer": 1,
-                    "explanation": "Pre-trained models need no labeled data or training pipeline — they handle many tasks out of the box with minimal code, while our custom model required the full build-train-evaluate pipeline."
-                }
-            ]
-        },
-        {
-            "name": "Building a Python Q&A Search Engine",
-            "description": "Covers loading datasets from Hugging Face using load_dataset(), building a TF-IDF search index, using cosine similarity to find relevant answers, building the find_answer() function, saving models with pickle, and wrapping the search engine in a Streamlit app.",
-            "mcqs": [
-                {
-                    "question": "What does load_dataset() from the Hugging Face datasets library do?",
-                    "options": [
-                        "Downloads a CSV file to your computer",
-                        "Downloads a dataset from Hugging Face directly into Python without manual file handling",
-                        "Converts a pandas DataFrame into a Hugging Face dataset",
-                        "Uploads a local file to Hugging Face"
-                    ],
-                    "answer": 1,
-                    "explanation": "load_dataset() downloads and loads a dataset from the Hugging Face Datasets Hub directly into Python as a DatasetDict object."
-                },
-                {
-                    "question": "Why do we use tfidf.transform() instead of tfidf.fit_transform() when processing a new user question?",
-                    "options": [
-                        "transform() is faster than fit_transform()",
-                        "fit_transform() does not work on single sentences",
-                        "We use transform() to convert using the existing vocabulary — fit_transform() would re-learn a new vocabulary and break the match with the dataset",
-                        "There is no difference between the two methods"
-                    ],
-                    "answer": 2,
-                    "explanation": "The vocabulary was built from the 18,612 training questions. Using fit_transform() on a new question would create a new different vocabulary, making comparison impossible."
-                },
-                {
+                    "topic": "Building a Python Q&A Search Engine",
                     "question": "What does cosine similarity measure between two text vectors?",
                     "options": [
                         "The number of words two documents have in common",
@@ -2008,20 +477,10 @@
                         "The TF-IDF score of the most important word"
                     ],
                     "answer": 2,
-                    "explanation": "Cosine similarity measures the angle between two vectors in the TF-IDF space. A score close to 1.0 means the documents are very similar in content."
+                    "explanation": "Cosine similarity measures the angle between two vectors in TF-IDF space. A score close to 1.0 means the documents are very similar in content."
                 },
                 {
-                    "question": "What does np.argmax(scores) return in the find_answer() function?",
-                    "options": [
-                        "The highest similarity score in the array",
-                        "The index of the highest similarity score — pointing to the most relevant question in the dataset",
-                        "The average of all similarity scores",
-                        "The number of questions with a similarity score above 0.5"
-                    ],
-                    "answer": 1,
-                    "explanation": "np.argmax() returns the index (position) of the maximum value in the array — in this case, the index of the most similar question in the dataset."
-                },
-                {
+                    "topic": "Building a Python Q&A Search Engine",
                     "question": "What is the purpose of saving the TF-IDF vectorizer, matrix, and DataFrame into a pickle file?",
                     "options": [
                         "To compress the data to save disk space",
@@ -2030,62 +489,7 @@
                         "To convert the data into CSV format"
                     ],
                     "answer": 2,
-                    "explanation": "Pickling saves trained objects (vectorizer, matrix, DataFrame) to a file. This lets the Streamlit app load them directly without re-downloading or re-training."
-                },
-                {
-                    "question": "Which Python library is used to save and load Python objects to/from files?",
-                    "options": [
-                        "json",
-                        "pickle",
-                        "shelve",
-                        "marshal"
-                    ],
-                    "answer": 1,
-                    "explanation": "pickle is a built-in Python library that converts Python objects into bytes and saves them to files. pickle.dump() saves, pickle.load() loads."
-                },
-                {
-                    "question": "What file mode ('wb' vs 'rb') is used when saving vs loading a pickle file?",
-                    "options": [
-                        "wb for both saving and loading",
-                        "rb for saving, wb for loading",
-                        "wb for saving (write binary), rb for loading (read binary)",
-                        "w for saving, r for loading"
-                    ],
-                    "answer": 2,
-                    "explanation": "Pickle saves data as bytes, not text. 'wb' (write binary) is used when saving with pickle.dump(), and 'rb' (read binary) is used when loading with pickle.load()."
-                },
-                {
-                    "question": "In the Streamlit Python Buddy app, why must set_page_config() be the very first Streamlit call?",
-                    "options": [
-                        "It is just a naming convention",
-                        "Because Streamlit requires page configuration before any other elements are rendered",
-                        "To make the app load faster",
-                        "Because it needs to run before the pickle file is loaded"
-                    ],
-                    "answer": 1,
-                    "explanation": "Streamlit requires set_page_config() to be called before any other Streamlit commands. Calling it later causes a StreamlitAPIException error."
-                },
-                {
-                    "question": "Which Streamlit function displays Python code with proper syntax highlighting?",
-                    "options": [
-                        "st.write()",
-                        "st.text()",
-                        "st.code()",
-                        "st.markdown()"
-                    ],
-                    "answer": 2,
-                    "explanation": "st.code(text, language='python') displays text as formatted, syntax-highlighted code — ideal for showing Python answer code."
-                },
-                {
-                    "question": "In the Python Buddy app, what triggers the answer to be displayed?",
-                    "options": [
-                        "The app automatically displays answers whenever text is typed",
-                        "Both the search button being clicked AND the question text box being non-empty",
-                        "Only the question text box being non-empty",
-                        "The page being refreshed"
-                    ],
-                    "answer": 1,
-                    "explanation": "The code checks 'if search_button and question.strip()' — both conditions must be True. The button must be clicked AND the question must not be empty."
+                    "explanation": "Pickling saves trained objects to a file so the Streamlit app can load them directly without re-downloading or re-training everything."
                 }
             ]
         }
