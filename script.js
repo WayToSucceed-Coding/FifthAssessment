@@ -62,7 +62,7 @@ function buildTopicSelectionGrid() {
     if (!currentModuleData || !currentModuleData.topics) return;
 
     topicSelectionGrid.innerHTML = '';
-    const completedTopics = JSON.parse(localStorage.getItem('completedTopicsFourthAssessment') || '[]');
+    const completedTopics = JSON.parse(localStorage.getItem('completedTopicsFifthAssessment') || '[]');
 
     currentModuleData.topics.forEach((topic, index) => {
         const totalQuestions = (topic.mcqs?.length || 0) + (topic.codeTasks?.length || 0);
